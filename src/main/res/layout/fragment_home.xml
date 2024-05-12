@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:id ="@+id/fragment_home"
+    >
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edge_bottom">
+
+        <!-- 프로필 + 닉네임 -->
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="75sp"
+            android:layout_height="75sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/default_profile_img"
+            android:shape="oval"/>
+
+        <TextView
+            android:id="@+id/textViewNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:textSize="24sp"
+            android:layout_gravity="bottom"/>
+
+        <!-- BMI표시 -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:layout_gravity="bottom"
+            android:text="@string/BMI"/>
+        <TextView
+            android:id="@+id/BMI_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textSize="50sp"
+            android:text="21"
+            />
+        </LinearLayout>
+    </LinearLayout>
+            <!--Bar chart-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <!-- 칼로리 소모 그래프 -->
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edge" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/edge"
+                >
+                <TextView
+                    android:id = "@+id/calorie_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:textSize = "30sp"
+                    android:text=""
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="350sp"
+                android:layout_height="350sp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+                <Button
+                    android:id="@+id/health"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="운동"/>
+                    <!--android:drawable="@drawable/health_img"-->
+
+
+                <Button
+                    android:id="@+id/eat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="식단"/>
+                    <!--android:drawable="@drawable/eat_img"-->
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+                <Button
+                    android:id="@+id/allergy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="알러지"/>
+                    <!--android:drawable="@drawable/allergy_img"-->
+
+
+                <Button
+                    android:id="@+id/callender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="달력"/>
+                    <!--android:drawable="@drawable/callender_img"-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:title="홈" />
+    <item
+        android:id="@+id/menu_allergy"
+        android:title="알러지" />
+    <item
+        android:id="@+id/menu_diet"
+        android:title="식단" />
+    <item
+        android:id="@+id/menu_exercise"
+        android:title="운동" />
+    <item
+        android:id="@+id/menu_callender"
+        android:title="캘린더" />
+    <item
+        android:id="@+id/menu_settings"
+        android:title="설정" />
+</menu>
+
